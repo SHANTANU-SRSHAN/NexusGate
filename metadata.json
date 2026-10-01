@@ -1,0 +1,6 @@
+{
+  "name": "NexusGate - GATE Preparation & PYQ Explorer",
+  "description": "Unified GATE preparation platform featuring all previous year questions, practice mode, mock tests, smart solutions, and Nexus AI study assistance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

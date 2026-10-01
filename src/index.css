@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #0a0d0c;
+    --bg-card: rgba(14, 18, 16, 0.85);
+    --border-green: rgba(16, 185, 129, 0.15);
+    --primary-green: #10B981;
+    --text-primary: #F1F5F9;
+    --text-muted: #94A3B8;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #090C0B;
+    color: #F1F5F9;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090C0B;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.35);
+}
+
+/* Clean Professional Card Utilities */
+.nexus-card {
+  background: rgba(14, 19, 16, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexus-card:hover {
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.nexus-card-active {
+  background: rgba(16, 24, 20, 0.85);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+/* Refined, Non-glaring Primary Button */
+.nexus-glow-btn {
+  position: relative;
+  background: #059669;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.18s ease;
+}
+
+.nexus-glow-btn:hover {
+  background: #10B981;
+}
+
+.nexus-glow-btn:active {
+  background: #047857;
+}
+
+/* Technical Grid Pattern - very subtle */
+.bg-tech-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
